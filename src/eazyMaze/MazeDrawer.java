@@ -1,4 +1,4 @@
-package ADSLab1;
+package eazyMaze;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +18,7 @@ public class MazeDrawer extends JFrame {
         this.maze = maze.maze;
         this.x_max = maze.maze.length;
         this.y_max = maze.maze[0].length;
-        this.mazeW = maze.mazeW;
+        this.mazeW = maze.mazeA;
         this.start_point = maze.start_point;
         this.end_point = maze.end_point;
         setTitle("Maze Drawer");
@@ -41,7 +41,7 @@ public class MazeDrawer extends JFrame {
 
             for (int i = 0; i < x_max; i++) {
                 for (int j = 0; j < y_max; j++) {
-                    if (start_point.x_coordinate == i && start_point.y_coordinate == j){
+                    if (start_point.x_coord == i && start_point.y_coord == j){
                         g.setFont(new Font("Arial", Font.BOLD, 20));
                         int x = j * cellSize + cellSize / 5;
                         int y = i * cellSize + cellSize / 2;
@@ -49,7 +49,7 @@ public class MazeDrawer extends JFrame {
                         g.setColor(Color.GREEN);
                         continue;
                     }
-                    if (end_point.x_coordinate == i && end_point.y_coordinate == j){
+                    if (end_point.x_coord == i && end_point.y_coord == j){
                         g.setFont(new Font("Arial", Font.BOLD, 20));
                         int x = j * cellSize + cellSize / 5;
                         int y = i * cellSize + cellSize / 2;
@@ -95,3 +95,4 @@ public class MazeDrawer extends JFrame {
 
 
 }
+
